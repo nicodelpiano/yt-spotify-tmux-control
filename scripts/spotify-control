@@ -1,0 +1,21 @@
+#!/usr/bin/env osascript
+
+on run argv
+  tell application "Spotify"
+    if it is running then
+      set control to item 1 of argv
+
+      if control equal "next" then
+	next track
+      else if control equal "playpause" then
+	playpause
+      else if control equal "previous" then
+	previous track
+      else if control equal "play" then
+	play
+      else if control equal "pause" then
+	pause
+      end if
+    end if
+  end tell
+end run

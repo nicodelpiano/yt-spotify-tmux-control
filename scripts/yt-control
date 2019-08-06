@@ -1,0 +1,21 @@
+#!/usr/bin/env osascript
+
+tell application "Google Chrome"
+  repeat with t in tabs of windows
+    tell t
+      if URL starts with "http://www.youtube.com/watch" or URL starts with "https://www.youtube.com/watch" then
+        execute javascript "
+        var player = document.getElementsByTagName('video')[0]
+	if (player) {
+	  if (player.paused) {
+	    player.play()
+	  } else {
+	    player.pause()
+	  }
+	} 
+        "
+        exit repeat
+      end if
+    end tell
+  end repeat
+end tell
