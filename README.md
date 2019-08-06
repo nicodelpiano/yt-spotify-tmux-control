@@ -28,7 +28,7 @@ set-option -g status-right "#[fg=black,bg=red] #(./yt-info) #[fg=black,bg=#1DB95
 
 and it will look something like this:
 
-![preview]()
+![preview](https://github.com/nicodelpiano/yt-spotify-tmux-control/blob/master/img/preview.png)
 
 ## Caveats
 
